@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ancizar Sans", sans-serif;
+
+}
+
+
+body {
+    background-image: url("src/image/raw.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+
+    & .card-box {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        & .div-card {
+            transform: translateY(20px);
+            animation: fadeUp 1s ease-out forwards;
+            animation-delay: 0.3s;
+            width: 60%;
+            text-align: center;
+            height: 50%;
+            color: white;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.249),
+                    rgba(0, 0, 0, 0.203));
+            box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+            -webkit-backdrop-filter: blur(6px);
+            filter: brightness(0.9);
+            backdrop-filter: blur(6px);
+            border-radius: 10px;
+            padding: 10px;
+
+            & .div-card-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                color: var(--color-text-gold);
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                & .button-telegram:hover {
+                    scale: 1.1;
+                }
+
+                & .button-telegram {
+                    width: 1em;
+                    transition: all 0.3s ease;
+
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: #0088cc;
+                    width: max-content;
+                    box-shadow: 0 0 20px rgb(0, 136, 204, 0.5);
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    & img {
+                        width: 20px;
+                    }
+
+                    & * {
+                        color: white;
+                        text-decoration: none;
+                        width: 7em;
+
+                    }
+                }
+
+
+                & h1 {
+                    letter-spacing: 0.1em;
+                    font-family: "Noto Serif", serif;
+                    color: var(--color-text-gold);
+                }
+
+                & span {
+                    font-family: " Noto Serif", serif;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    font-size: 1.1em;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+:root {
+    --color-text-default: white;
+    --color-text-gold: rgb(220, 186, 115);
+
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
