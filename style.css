@@ -11,7 +11,7 @@
 
 
 body {
-    background-image: url("src/image/raw.png");
+    background-image: url("raw.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
